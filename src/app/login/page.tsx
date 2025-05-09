@@ -1,13 +1,12 @@
 import { Box, Button, Typography } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import Image from 'next/image';
-import loginImage from '@/assets/login_image.jpg'; // Use your actual image path
+import loginImage from '@/assets/login_image.jpg'; 
 import { signIn } from '@/lib/auth';
 
 const Page = async () => {
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>
-      {/* Left side with image */}
       <Box sx={{ flex: 1, position: 'relative' }}>
         <Image
           src={loginImage}
@@ -18,7 +17,6 @@ const Page = async () => {
         />
       </Box>
 
-      {/* Right side with sign-in content */}
       <Box
         sx={{
           flex: 1,
@@ -36,7 +34,6 @@ const Page = async () => {
           Sign in with your Google account to continue
         </Typography>
 
-        {/* Server action form */}
         <form
           action={async () => {
             'use server';

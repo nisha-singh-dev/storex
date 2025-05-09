@@ -6,7 +6,8 @@ import { redirect } from 'next/navigation';
 export default async function Home() {
   const session = await auth();
   if (!session) return redirect('/login');
-
+  console.log("this is session",session);
+  
   const userName = session?.user?.name;
 
   return (
